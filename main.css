@@ -1,0 +1,55 @@
+body {
+	background-color: #eee;
+}
+
+.header {
+	text-align: center;
+}
+
+.header .title {
+	font-weight: 900;
+	letter-spacing: -1px;
+}
+
+.header p {
+	font-size: 20px;
+	letter-spacing: -1px;
+	padding-top: 20px;
+}
+
+.jumbotron fieldset input {
+	min-height: 50px;
+}
+
+
+.table{
+	width: 100%;
+	padding: 10px;
+	margin: 0 auto;
+	max-width: 400px;
+	font-size: 18px;
+}
+
+th {
+	text-align: center;
+	font-weight: 900;
+}
+
+td {
+	text-align: center;
+}
+
+fieldset {
+	margin: 0 auto;
+	padding: 20px 0 40px;
+	max-width: 400px;
+}
+
+.modal-body {
+	text-align: center;
+}
+
+.modal-body h1 {
+	font-weight: 900;
+	letter-spacing: -1px;
+}
