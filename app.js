@@ -48,28 +48,30 @@ $("document").ready(function(){
   //genera la acción cuando se oprime enter
   $(".input").keypress(function(e){
     $(".input").removeClass("has-error")
+    $(".errors").html("");
     if (e.which == 13) {
       e.preventDefault()
-      //validacion de los datos ingresados al input
-      if($(".input").val() == ""){
+      if(e.target.value === "") {
         $(".input").addClass("has-error")
         $(".errors").append('Escribe un número de cuatro dígitos no repetidos');
+        return false;
       }
-      if($(".input").val().indexOf(' ')>=0){
+      if($(".input").val().indexOf(' ') >= 0){
         $(".input").addClass("has-error")
-        $("input").siblings('p').html('No puede contener espacios');
+        $(".errors").append('No puede contener espacios');
+        return false;
       }
       if($(".input").val().length < 4){
         $(".input").addClass("has-error")
-        $("input").siblings('p').html('El número debe tener 4 dígitos');
+        $(".errors").append('El número debe tener 4 dígitos');
+        return false;
       }
       if($(".input").val().length > 4){
         $(".input").addClass("has-error")
-        $("input").siblings('p').html('El número solo debe tener 4 dígitos');
+        $(".errors").append('El número solo debe tener 4 dígitos');
+        return false;
       }
       else{
-      $(".input").parent().removeClass("has-error");
-      $(".input").siblings('p').html('');
       //captura el valor del número ingresado
       value = $(".input").val()
 
